@@ -10,7 +10,11 @@
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "jest": "readonly",
+        "describe": "readonly",
+        "it": "readonly",
+        "expect": "readonly"
     },
     "parserOptions": {
         "ecmaFeatures": {
@@ -25,6 +29,13 @@
     "rules": {
         "react/jsx-filename-extension": [1, {
             "extensions": [".js", ".jsx"]
+        }],
+        "import/no-extraneous-dependencies": ["error",
+            { "devDependencies": true
+            }
+        ],
+        "no-underscore-dangle": ["error", {
+            "allow": ["___loader"]
         }]
     }
 }
