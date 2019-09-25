@@ -1,0 +1,55 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-config-prettier"
+    ],
+    "jsRules": {},
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "jest": "readonly",
+        "describe": "readonly",
+        "it": "readonly",
+        "expect": "readonly",
+        "context": "readonly",
+        "beforeEach": "readonly",
+        "cy": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "max-line-length": {
+            "options": [120]
+        },
+        "max-file-line-count": [
+            true,
+            400
+        ],
+        "semicolon": [true, "never"],
+        "only-arrow-functions": true,
+        "object-literal-sort-keys": false,
+        "interface-name": [true, "never-prefix"],
+        "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".ts", ".jsx"]
+        }],
+        "import/no-extraneous-dependencies": ["error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "no-underscore-dangle": ["error", {
+            "allow": ["___loader"]
+        }]
+    },
+    "rulesDirectory": []
+}
